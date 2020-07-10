@@ -2,8 +2,14 @@
 
 $conexao = new mysqli('127.0.0.1', 'root', '123456789', 'treinaweb');
 
-var_dump($conexao);
+//$sql = 'create table alunos (id int primary key, nome varchar(100))';
 
-$conexao2 = mysqli_connect('127.0.0.1', 'root', '123456789', 'treinaweb');
+//$sql = "insert into alunos (id, nome) values (1, 'João da Silva')";
 
-var_dump($conexao2);
+$sql = 'select * from alunos';
+
+var_dump($conexao->query($sql));
+
+//$conexao2 = mysqli_connect('127.0.0.1', 'root', '123456789', 'treinaweb');
+
+//var_dump($conexao2);
