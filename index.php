@@ -8,7 +8,11 @@ $conexao = new mysqli('127.0.0.1', 'root', '123456789', 'treinaweb');
 
 $sql = 'select * from alunos';
 
-var_dump($conexao->query($sql));
+$resultado = $conexao->query($sql);
+
+while($linha = $resultado->fetch_object()) {
+    var_dump($linha);
+}
 
 //$conexao2 = mysqli_connect('127.0.0.1', 'root', '123456789', 'treinaweb');
 
