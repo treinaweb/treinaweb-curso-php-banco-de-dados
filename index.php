@@ -6,7 +6,9 @@ $conexao = new mysqli('127.0.0.1', 'root', '123456789', 'treinaweb');
 
 //$sql = "insert into alunos (id, nome) values (1, 'João da Silva')";
 
-$sql = 'select * from alunos';
+$id = '2 or 1=1';
+
+$sql = "select * from alunos where id = {$id}";
 
 $resultado = $conexao->query($sql);
 
