@@ -10,8 +10,14 @@ $sql = 'select * from alunos';
 
 $resultado = $conexao->query($sql);
 
-while($linha = $resultado->fetch_object()) {
-    var_dump($linha);
+// while($linha = $resultado->fetch_object()) {
+//     var_dump($linha);
+// }
+
+$linhas = $resultado->fetch_all(MYSQLI_ASSOC);
+
+foreach ($linhas as $linha) {
+    echo $linha['id'] . ' ' . $linha['nome'] . '<br>';
 }
 
 //$conexao2 = mysqli_connect('127.0.0.1', 'root', '123456789', 'treinaweb');
